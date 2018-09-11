@@ -6,8 +6,11 @@ Rails.application.routes.draw do
     def self.matches?(request)
       subdomains = %w{ www admin }
       request.subdomain.present? && !subdomains.include?(request.subdomain)
-
     end
+  end
+
+  constraints Subdomain do
+    # resources :workouts
   end
 
   devise_for :users
