@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   end
 
   constraints Subdomain do
-    # resources :workouts
+    resources :workouts
   end
 
   devise_for :users
